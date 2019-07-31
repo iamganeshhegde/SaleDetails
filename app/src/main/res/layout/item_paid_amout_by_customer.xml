@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="10dp"
+        android:background="@android:color/transparent"
+        android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+                android:padding="5dp"
+            android:background="@color/green">
+
+
+        <TextView
+                android:id="@+id/tvTotalUpdateItem"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:text="Total"
+                android:layout_marginLeft="5dp"
+                app:layout_constraintEnd_toStartOf="@+id/tvBalanceUpdateItem"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:padding="5dp"/>
+
+
+        <TextView
+                android:id="@+id/tvBalanceUpdateItem"
+                android:textColor="@android:color/black"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tvTotalUpdateItem"
+                android:text="Balance"
+                android:padding="5dp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilamountPaidUpdateItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/tvTotalUpdateItem"
+                app:layout_constraintEnd_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:padding="5dp">
+
+
+            <EditText
+                    android:id="@+id/et_paid_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+
+                    android:hint="Enter the amount paid by customer"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Pay"
+
+                android:background="@drawable/bg_pay"
+                app:layout_constraintEnd_toStartOf="@+id/btnItemCancel"
+                app:layout_constraintTop_toBottomOf="@+id/tilamountPaidUpdateItem"
+                app:layout_constraintStart_toStartOf="parent"
+                android:id="@+id/btnItemPayUpdate"/>
+
+        <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Cancel"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tilamountPaidUpdateItem"
+
+                android:background="@drawable/bg_delete"
+                app:layout_constraintStart_toEndOf="@+id/btnItemPayUpdate"
+                android:id="@+id/btnItemCancel"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
+
