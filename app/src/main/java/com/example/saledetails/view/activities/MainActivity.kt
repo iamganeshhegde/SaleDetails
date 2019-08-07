@@ -49,6 +49,8 @@ class MainActivity : AppCompatActivity(), TotalSalesAdapter.OnClickUpdate {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
+
         saleDetailsViewModel = ViewModelProviders.of(this).get(SaleDetailsViewModel::class.java)
 
         initRecyclerView()
@@ -259,6 +261,9 @@ class MainActivity : AppCompatActivity(), TotalSalesAdapter.OnClickUpdate {
         var alertDialogBuilder: AlertDialog.Builder = AlertDialog.Builder(this)
         alertDialogBuilder.setView(layout)
         alertDialog = alertDialogBuilder.create()
+        alertDialog.window.setBackgroundDrawableResource(android.R.color.transparent)
+
+
 
 
         var etAmountPaid = layout.et_paid_amount

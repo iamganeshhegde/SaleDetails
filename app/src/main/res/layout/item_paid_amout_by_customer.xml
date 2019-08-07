@@ -7,7 +7,8 @@
         android:layout_width="match_parent"
         android:layout_margin="5dp"
         app:cardCornerRadius="10dp"
-        android:background="@android:color/transparent"
+        app:cardPreventCornerOverlap="false"
+        app:cardBackgroundColor="@color/green"
         android:layout_height="wrap_content">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -18,7 +19,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
                 android:padding="5dp"
-            android:background="@color/green">
+            android:background="@android:color/transparent">
 
 
         <TextView
